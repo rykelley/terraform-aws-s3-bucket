@@ -14,10 +14,6 @@ variable "aws_username" {
   description = "AWS Username"
 }
 
-variable "files" {
-  description = "map s3 keys to files"
-  type = "map"
-}
 
 variable "tags" {
   description = "A mapping of tags to assign to bucket"

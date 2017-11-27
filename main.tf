@@ -68,11 +68,3 @@ resource "aws_s3_bucket_policy" "public" {
 }
 EOF
 }
-
-resource "aws_s3_bucket_object" "file" {
-  count   = "${length(var.files)}"
-  bucket  = "${aws_s3_bucket.this.id}"
-  key     = "${element(keys(var.files), count.index)}"
-  source  = "${lookup(var.files, element(keys(var.files), count.index))}"
-  etag    = "${md5(file("${lookup(var.files, element(keys(var.files), count.index))}"))}"
-}

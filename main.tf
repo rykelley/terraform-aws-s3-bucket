@@ -7,12 +7,6 @@ terraform {
   backend "s3" {}
 }
 
-
-terraform {
-  backend "s3" {}
-}
-
-
 resource "aws_s3_bucket" "this" {
   bucket = "${var.s3_fqdn}"
   force_destroy = true

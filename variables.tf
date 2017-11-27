@@ -1,3 +1,7 @@
+variable "aws_region" {
+  default = ""
+}
+
 variable "s3_fqdn" {
   description = "fqdn for s3 bucket"
 }
@@ -24,7 +28,3 @@ variable "allow_public" {
   description = "Allow public read access to bucket"
   default     = false
 }
-
-
-
-

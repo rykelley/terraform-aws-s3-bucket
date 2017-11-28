@@ -14,7 +14,6 @@ variable "aws_username" {
   description = "AWS Username"
 }
 
-
 variable "tags" {
   description = "A mapping of tags to assign to bucket"
   default     = {}
